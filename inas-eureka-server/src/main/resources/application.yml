@@ -1,0 +1,19 @@
+## 服务启动端口
+server:
+  port: 8761
+
+eureka:
+  client:
+    ## 是否将自己注册到Eureka Server（此程序为服务端 无需注册）
+    register-with-eureka: false
+    ## 是否从Eureka Server获取注册信息（此程序为服务端 无需获取注册信息）
+    fetch-registry: false
+    ## 服务URL地址
+    service-url:
+      defaultZone: http://192.168.1.3:8761/eureka
+
+  server:
+    ## 关闭自我保护
+    enable-self-preservation: false
+    ## 清理无效节点时间间隔（单位毫秒）
+    eviction-interval-timer-in-ms: 4000
